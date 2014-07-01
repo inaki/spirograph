@@ -111,20 +111,6 @@ This game cannot run in your browser.\
 		}
 	}
 
-	g('save').onclick = function(){
-		// remove black background
-		var temp = document.createElement('CANVAS');
-		temp.setAttribute('width', 350);
-		temp.setAttribute('height', 350);
-		temp = temp.getContext('2d');
-		temp.fillStyle='#FFF';
-		temp.fillRect(0,0,350,350);
-		temp.drawImage(ctx_under.canvas, 0,0);
-		window.open(temp.canvas.toDataURL());
-	}
-	g('save').onmouseover=function(){g('tooltip').innerHTML='save';};
-	g('config').onmouseover=function(){g('tooltip').innerHTML='configure';};
-	g('save').onmouseout = g('config').onmouseout = function(){g('tooltip').innerHTML='';};
 
 	// display seed and stuff while drawing
 	function displayItems(bool){
