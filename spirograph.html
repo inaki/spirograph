@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>spirograph</title>
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="spirograph.js"></script>
+
+<style>
+  body {
+    background-image: url('eyes.png');
+  }
+  .container {
+    position: relative;
+    border-radius: 8px;
+    top: 20px;
+    background-color: #fff;
+    width: 500px;
+  }
+  #under {
+    position: absolute;
+    max-width: 350px;
+  }
+  #view1 {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+  }
+  #box2 {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  canvas {
+    margin-left: 55px;
+  }
+</style>
+</head>
+<body>
+
+      <div class="container" id="spirograph">
+        <div id="loading">
+            spirograph loading.
+        </div>
+
+
+        <div id="spirograph" >
+                <div id="view1" class="row">
+                    <canvas id="under" width="350" height="350"></canvas>
+                    <canvas id="canvas" width="350" height="350"></canvas>
+
+
+                    <div class="col-md-12">
+                      <div class="col-xs-3">
+                        <button type="submit" id="redraw" class="btn btn-warning">Redraw</button>
+                      </div>
+                      <div class="col-xs-3">
+
+                        <select id="speed"  class="form-control">
+                            <option>Pause</option>
+                            <option selected>Slow</option>
+                            <option>Medium</option>
+                            <option>Fast</option>
+                        </select>
+
+                        <div class="checkbox">
+                            <label id="showBox">
+                              <input type="checkbox" id="display" checked> Show
+                            </label>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+                <DIV id="box2">
+            <H3>Parameters</H3>
+            Static Circle: <input id="r1" type="range" min="10" max="100" value="90"><SPAN id="outr1"></SPAN><BR>
+            Mobile Circle: <input id="r2" type="range" min="-90" max="90" value="21"><SPAN id="outr2"></SPAN><BR>
+            Tracing Stick: <input id="r3" type="range" min="0" max="200" value="50"><SPAN id="outr3"></SPAN><BR>
+        </DIV>
+
+
+        </div>
+      </div>
+
+      <DIV class="but" id="config"></DIV>
+
+
+  </body>
+
+</html>
